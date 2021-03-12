@@ -7,5 +7,5 @@ pub fn lerp(t: f64, a: f64, b: f64) -> f64 {
 }
 
 pub fn bezier(t: f64, a: f64, b: f64, c: f64) -> f64 {
-    lerp(t, lerp(t, a, b), c)
+    lerp(t, lerp(t, a, c), lerp(t, c, b))
 }
