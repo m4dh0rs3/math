@@ -15,8 +15,8 @@ impl<T> Vec2D<T> {
     }
 }
 
-impl From<Vec2D<u8>> for Vec2D<f64> {
-    fn from(vec_2d: Vec2D<u8>) -> Self {
+impl From<Vec2D<i8>> for Vec2D<f64> {
+    fn from(vec_2d: Vec2D<i8>) -> Self {
         Self {
             x: vec_2d.x.into(),
             y: vec_2d.y.into(),
@@ -24,11 +24,11 @@ impl From<Vec2D<u8>> for Vec2D<f64> {
     }
 }
 
-impl From<Vec2D<f64>> for Vec2D<u8> {
+impl From<Vec2D<f64>> for Vec2D<i8> {
     fn from(vec_2d: Vec2D<f64>) -> Self {
         Self {
-            x: vec_2d.x.round() as u8,
-            y: vec_2d.y.round() as u8,
+            x: vec_2d.x.round() as i8,
+            y: vec_2d.y.round() as i8,
         }
     }
 }
