@@ -32,5 +32,5 @@ macro_rules! trig {
     };
 }
 
-trig!(f32);
+//trig!(f32);
 trig!(f64);

@@ -144,7 +144,7 @@ fn intersection_f64() {
         None,
     );
 }
-
+/*
 #[test]
 fn vec2df32_ops() {
     assert_eq!(
@@ -289,3 +289,4 @@ fn intersection_f32() {
         None,
     );
 }
+ */
