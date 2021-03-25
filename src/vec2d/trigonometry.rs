@@ -18,6 +18,11 @@ macro_rules! trig {
                 self.y /= maq;
             }
 
+            pub fn round(&mut self) {
+                self.x = self.x.round();
+                self.y = self.y.round();
+            }
+
             /* pub fn angle(&self) -> $Float {
                 self.y.atan2(self.x)
             } */
