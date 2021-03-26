@@ -36,7 +36,7 @@ impl<
         /* let s = (-s1.y * (p1.x - r1.x) + s1.x * (p1.y - r1.y)) / k;
         let t = (s2.x * (p1.y - r1.y) - s2.y * (p1.x - r1.x)) / k; */
 
-        if s >= 0.into() && s <= 1.into() && t >= 0.into() && t <= 1.into() {
+        if s > 0.into() && s < 1.into() && t > 0.into() && t < 1.into() {
             Some(Self {
                 x: p1.x + t * s1.x,
                 y: p1.y + t * s1.y,
