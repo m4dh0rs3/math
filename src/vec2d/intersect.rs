@@ -7,7 +7,7 @@ impl<T: ops::Mul<Output = T> + ops::Sub<Output = T> + Copy> Vec2D<T> {
     }
 }
 
-impl<
+/* impl<
         T: ops::Mul<Output = T>
             + ops::Add<Output = T>
             + ops::Sub<Output = T>
@@ -45,4 +45,4 @@ impl<
             None
         }
     }
-}
+} */

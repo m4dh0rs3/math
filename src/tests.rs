@@ -114,7 +114,7 @@ fn utils_fn_f64() {
     assert_eq!(bezier(1.0, 2.0, 4.0, 6.0), 6.0);
 }
 
-#[test]
+/* #[test]
 fn intersection_f64() {
     assert_eq!(
         Vec2D::<f64>::intersect(
@@ -143,7 +143,7 @@ fn intersection_f64() {
         ),
         None,
     );
-}
+} */
 /*
 #[test]
 fn vec2df32_ops() {
