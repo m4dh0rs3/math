@@ -1,5 +1,5 @@
 /// Holds an value of radians in [-π; π].
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Angle(f64);
 
 // to call [`f64`] methods on it
