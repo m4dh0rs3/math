@@ -1,4 +1,5 @@
 mod algebra;
+mod shorthand;
 
 /// Holds an value of radians in [-π; π].
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -11,10 +12,17 @@ impl From<f64> for Angle {
 }
 
 impl Angle {
-    /// Create a new angle from [`f64`].
+    /// Create a new [`Angle`] from [`f64`].
     /// Value will be normalized! ([-π; π])
     pub fn new(angle: f64) -> Self {
         Self(angle).normal()
+    }
+
+    /// Create new [`Angle`] form [`f64`],
+    /// but without gurantee of angle
+    /// in [-π; π].
+    pub fn raw(angle: f64) -> Self {
+        Self(angle)
     }
 
     /// Normaize an [`Angle`] from [`f64`] to [-π; π].

@@ -17,3 +17,10 @@ impl<T> Vec2D<T> {
         Self { x, y }
     }
 }
+
+impl<T: From<u8>> Vec2D<T> {
+    /// Create new [`Vec2D`] at origin.
+    pub fn zero() -> Self {
+        Self::new(0.into(), 0.into())
+    }
+}
