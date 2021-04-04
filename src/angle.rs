@@ -1,15 +1,8 @@
+mod algebra;
+
 /// Holds an value of radians in [-π; π].
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Angle(f64);
-
-// to call [`f64`] methods on it
-impl std::ops::Deref for Angle {
-    type Target = f64;
-
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 
 impl From<f64> for Angle {
     fn from(float_64: f64) -> Self {
@@ -26,6 +19,12 @@ impl Angle {
 
     /// Normaize an [`Angle`] from [`f64`] to [-π; π].
     pub fn normal(self) -> Self {
-        Angle(self.sin().atan2(self.cos()))
+        use std::f64::consts::PI;
+
+        if *self < PI || *self > PI {
+            Angle(self.sin().atan2(self.cos()))
+        } else {
+            self
+        }
     }
 }
