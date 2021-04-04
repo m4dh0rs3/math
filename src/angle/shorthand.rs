@@ -3,22 +3,22 @@ use std::f64::consts::{FRAC_2_PI, PI};
 
 impl Angle {
     /// Create new [`Angle`] pointing up.
-    fn up() -> Self {
+    pub fn up() -> Self {
         Self::raw(-PI)
     }
 
     /// Create new [`Angle`] pointing left.
-    fn left() -> Self {
+    pub fn left() -> Self {
         Self::raw(FRAC_2_PI)
     }
 
     /// Create new [`Angle`] pointing right.
-    fn right() -> Self {
+    pub fn right() -> Self {
         Self::raw(-FRAC_2_PI)
     }
 
     /// Create new [`Angle`] pointing down.
-    fn down() -> Self {
+    pub fn down() -> Self {
         Self::raw(0.0)
     }
 }
