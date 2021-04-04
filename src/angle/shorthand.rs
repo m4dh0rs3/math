@@ -1,5 +1,5 @@
 use super::Angle;
-use std::f64::consts::{FRAC_2_PI, PI};
+use std::f64::consts::{FRAC_PI_2, PI};
 
 impl Angle {
     /// Create new [`Angle`] pointing up.
@@ -9,12 +9,12 @@ impl Angle {
 
     /// Create new [`Angle`] pointing left.
     pub fn left() -> Self {
-        Self::raw(FRAC_2_PI)
+        Self::raw(FRAC_PI_2)
     }
 
     /// Create new [`Angle`] pointing right.
     pub fn right() -> Self {
-        Self::raw(-FRAC_2_PI)
+        Self::raw(-FRAC_PI_2)
     }
 
     /// Create new [`Angle`] pointing down.
