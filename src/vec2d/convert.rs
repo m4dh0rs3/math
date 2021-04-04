@@ -27,7 +27,7 @@ macro_rules! from_integral {
 }
 
 from_integral!(f32, f64);
-from_float!(f64, f32);
+from_integral!(f64, f32);
 
 from_float!(f64, i8);
 from_float!(f64, i16);
