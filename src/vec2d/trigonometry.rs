@@ -28,9 +28,9 @@ macro_rules! trig {
                 }
             }
 
-            /* pub fn angle(&self) -> $Float {
-                self.y.atan2(self.x)
-            } */
+            pub fn angle(&self) -> Angle {
+                self.y.atan2(self.x).into()
+            }
 
             pub fn from_polar(a: Angle, r: $Float) -> Self {
                 Self {
